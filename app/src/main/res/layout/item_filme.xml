@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:background="@color/colorBackground"
     android:padding="10dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@android:color/white">
     <ImageView
         android:id="@+id/imagem"
-        android:layout_width="100dp"
-        android:layout_height="match_parent"
-        android:src="@drawable/camera_off"
-        android:scaleType="centerInside"/>
-    <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="8"
+        android:layout_weight="3"
+        android:src="@drawable/novo_poster"
+        android:scaleType="centerCrop"
+        android:adjustViewBounds="true"/>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="5dp">
         <TextView
             android:id="@+id/titulo"
             android:layout_width="match_parent"
@@ -24,7 +33,6 @@
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/black"
             android:textStyle="bold"
-            android:layout_marginTop="10dp"
             android:text="Titulo"/>
         <TextView
             android:id="@+id/descricao"
@@ -32,6 +40,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceMedium"
             android:maxLength="50"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:textColor="@android:color/black"
             android:layout_marginTop="5dp"
             android:text="Descrição"/>
@@ -47,8 +57,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            android:layout_marginTop="5dp"
             android:numStars="5"
             android:rating="3"
             style="@style/Widget.AppCompat.RatingBar.Indicator"/>
     </LinearLayout>
 </LinearLayout>
+</FrameLayout>

@@ -3,4 +3,9 @@
     <string name="atualizar">Atualizar</string>
     <string name="atualizar_lista">Atualizando lista de filmes....</string>
     <string name="btn">Trailer</string>
+    <string name="data">Data de Lançamento:</string>
+    <string name="desc">Descrição:</string>
+    <string name="aval">Avaliação:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

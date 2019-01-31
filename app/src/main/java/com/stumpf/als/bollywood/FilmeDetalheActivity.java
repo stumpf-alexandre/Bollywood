@@ -1,13 +1,9 @@
 package com.stumpf.als.bollywood;
-
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.RatingBar;
-import android.widget.TextView;
-
 public class FilmeDetalheActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,14 +11,13 @@ public class FilmeDetalheActivity extends AppCompatActivity {
         setContentView(R.layout.activity_filme_detalhe);
         Intent intent = getIntent();
         ItemFilme itemFilme = (ItemFilme) intent.getSerializableExtra(MainActivity.KEY_FILME);
-        TextView titulo = findViewById(R.id.detalhe_titulo);
-        titulo.setText(itemFilme.getTitulo());
-        TextView data = findViewById(R.id.detalhe_data);
-        data.setText(itemFilme.getData());
-        TextView desc = findViewById(R.id.detalhe_desc);
-        desc.setText(itemFilme.getDescricao());
-        RatingBar avaliacao = findViewById(R.id.detalhe_avaliacao);
-        avaliacao.setRating(itemFilme.getAvaliacao());
-        Button btn = findViewById(R.id.btn_trailer);
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        FilmeDetalheFragment fragment = new FilmeDetalheFragment();
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(MainActivity.KEY_FILME, itemFilme);
+        fragment.setArguments(bundle);
+        fragmentTransaction.add(R.id.fragment_filme_detalhe, fragment);
+        fragmentTransaction.commit();
     }
 }
