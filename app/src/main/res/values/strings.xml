@@ -6,6 +6,7 @@
     <string name="data">Data de Lançamento:</string>
     <string name="desc">Descrição:</string>
     <string name="aval">Avaliação:</string>
+    <string name="detalhe_activity_labe">Detalhe</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

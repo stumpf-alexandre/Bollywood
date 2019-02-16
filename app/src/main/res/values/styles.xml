@@ -7,5 +7,17 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="BollywoodStyle">
+    </style>
+    <style
+        name="BollywoodTheme"
+        parent="AppTheme">
+        <item name="actionBarStyle">@style/ActionBar.Solid.Bollywood.NoTitle</item>
+    </style>
+    <style
+        name="ActionBar.Solid.Bollywood.NoTitle"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="displayOptions">useLogo|showHome</item>
+        <item name="logo">@mipmap/ic_launcher</item>
+    </style>
 </resources>
