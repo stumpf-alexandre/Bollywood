@@ -16,7 +16,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Captão America e Homem de Ferro"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/white"
             android:background="@color/colorrPrincipal"
