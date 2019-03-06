@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/principal_post"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:src="@drawable/cinema" />
+        <TextView
+            android:id="@+id/principal_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Captão America e Homem de Ferro"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:textColor="@android:color/white"
+            android:background="@color/colorrPrincipal"
+            android:layout_alignTop="@+id/principal_post"
+            android:textStyle="bold"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorrPrincipal"
+        android:layout_alignBottom="@+id/principal_post">
+
+        <RatingBar
+            android:id="@+id/principal_avaliacao"
+            style="@android:style/Widget.Material.Light.RatingBar.Indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:numStars="5"
+            android:padding="10dp"
+            android:rating="3" />
+    </FrameLayout>
+</RelativeLayout>
