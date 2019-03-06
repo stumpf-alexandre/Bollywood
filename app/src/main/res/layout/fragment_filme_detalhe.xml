@@ -23,7 +23,6 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="5dp"
-            android:text="Captão America e Homem de Ferro"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@android:color/white"
             android:background="@color/colorrPrincipal"
@@ -46,8 +45,7 @@
             android:id="@+id/detalhe_data"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:text="22/10/1979"/>
+            android:textAppearance="?android:textAppearanceMedium"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -60,8 +58,7 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:textAppearanceSmall"
             android:maxLines="8"
-            android:ellipsize="end"
-            android:text="Um homem vive atormentado após perder a sua filha mais nova, cujo corpo nunca foi encontrado, mas sinais de que ela teria sido violentada e assassinada são encontrados em uma cabana nas montanhas. Anos depois da tragédia, ele recebe um chamado misterioso para retornar a esse local, onde ele vai receber uma lição de vida."/>
+            android:ellipsize="end"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

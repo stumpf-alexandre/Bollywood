@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 public class FilmeDetalheFragment extends Fragment {
@@ -31,6 +32,13 @@ public class FilmeDetalheFragment extends Fragment {
         desc.setText(itemFilme.getDescricao());
         RatingBar avaliacao = view.findViewById(R.id.detalhe_avaliacao);
         avaliacao.setRating(itemFilme.getAvaliacao());
+        //API
+        ImageView capa = view.findViewById(R.id.detalhe_filme);
+        new DownloadImageTask(capa).execute(itemFilme.getCapaPath());
+        if (view.findViewById(R.id.item_post) != null){
+            ImageView poster = view.findViewById(R.id.item_post);
+            new DownloadImageTask(poster).execute(itemFilme.getPosterPath());
+        }
         return view;
     }
 }
